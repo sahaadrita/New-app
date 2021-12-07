@@ -6,7 +6,7 @@ function App() {
   const expenses=[
     {
       id: 'e1',
-      title: 'Toilet Paper',
+      title: 'Washing Machine',
       amount: 94.12,
       date: new Date(2020, 7, 14),
     },
@@ -24,9 +24,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ]
+
+  const addExpenseHandler = expense => {
+    console.log('Tn App.js')
+    console.log(expense) 
+  }
   return (
     <div>
-     <NewExpense/>
+     <NewExpense onAddExpense={addExpenseHandler}/>
      <Expenses items={expenses}/>
      
     </div>
