@@ -3,7 +3,8 @@ import './App.css';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 import { useState } from 'react';
-
+import Button from './components/Button';
+import styled from 'styled-components';
   const DummyExpenses=[
     {
       id: 'e1',
@@ -32,10 +33,12 @@ import { useState } from 'react';
       return[expense, ...prevExpenses]
     })
   }
+  
   return (
     <div>
      <NewExpense onAddExpense={addExpenseHandler}/>
      <Expenses items={expenses}/>
+      <Button backgroundColor="blue">Click</Button>
      
     </div>
   );
